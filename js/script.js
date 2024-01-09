@@ -1,9 +1,9 @@
-let API = `https://opentdb.com/api.php?amount=10`;
+let API = "https://opentdb.com/api.php?amount=10";
 
 let preguntas =[];
 
 generarPreguntas();
-function generarPreguntas() {
+async function generarPreguntas() {
     fetch(API)
       .then((response) => response.json())
       .then((data) => {
@@ -11,6 +11,7 @@ function generarPreguntas() {
         data.results.forEach(pregunta => {
             console.log(pregunta)
             preguntas.push(pregunta);
+            
         });
         console.log(preguntas)
         });   
