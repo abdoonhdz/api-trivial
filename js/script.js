@@ -2,7 +2,7 @@ let API = "https://opentdb.com/api.php?amount=10";
 
 let preguntas =[];
 
-generarPreguntas();
+/**generarPreguntas();
 async function generarPreguntas() {
     fetch(API)
       .then((response) => response.json())
@@ -16,3 +16,5 @@ async function generarPreguntas() {
         console.log(preguntas)
         });   
   }
+   */
+
