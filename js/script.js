@@ -1,6 +1,7 @@
 let API = "https://opentdb.com/api.php?amount=10";
 
 let preguntas = [];
+var respuesta_rellena = 0;
 let numPregunta = 0;
 let modalModal = document.getElementById("modalModal");
 let modalTitulo = document.getElementById("modalTitulo");
@@ -30,7 +31,7 @@ siguientePregunta = function () {
 }
 
 generarPregunta = function () {
-  var respuesta_rellena = 0;
+  respuesta_rellena = 0;
   modalTitulo.innerHTML = preguntas[numPregunta].category;
 
   // Generar un número aleatorio entre 1 y 4
@@ -56,9 +57,9 @@ generarPregunta = function () {
 comprobarRespuesta = function(id){
 
   if(id == respuesta_rellena){
-    infoRespuesta.innerHTML = '<b class="text-success">¡Respuesta correcta!</b>';
+    infoRespuesta.innerHTML = '<h3 class=" text-center"><b class="text-success">¡Respuesta correcta!</b></h3>';
   } else {
-    infoRespuesta.innerHTML = '<b class="text-danger">¡Respuesta incorrecta!</b>';
+    infoRespuesta.innerHTML = '<h3 class=" text-center"><b class="text-danger">¡Respuesta incorrecta!</b></h3>';
   }
 
 }
