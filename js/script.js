@@ -33,6 +33,12 @@ siguientePregunta = function () {
 generarPregunta = function () {
   respuesta_rellena = 0;
   modalTitulo.innerHTML = preguntas[numPregunta].category;
+  infoRespuesta.innerHTML = '';
+  
+  respuesta_1.disabled = false;
+  respuesta_2.disabled = false;
+  respuesta_3.disabled = false;
+  respuesta_4.disabled = false;
 
   // Generar un número aleatorio entre 1 y 4
   var numeroAleatorio = Math.floor(Math.random() * 4) + 1;
@@ -55,6 +61,11 @@ generarPregunta = function () {
 }
 
 comprobarRespuesta = function(id){
+
+  respuesta_1.disabled = true;
+  respuesta_2.disabled = true;
+  respuesta_3.disabled = true;
+  respuesta_4.disabled = true;
 
   if(id == respuesta_rellena){
     infoRespuesta.innerHTML = '<h3 class=" text-center"><b class="text-success">¡Respuesta correcta!</b></h3>';
