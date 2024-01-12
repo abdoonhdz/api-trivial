@@ -9,6 +9,7 @@ let respuesta_1 = document.getElementById("respuesta_1");
 let respuesta_2 = document.getElementById("respuesta_2");
 let respuesta_3 = document.getElementById("respuesta_3");
 let respuesta_4 = document.getElementById("respuesta_4");
+const infoRespuesta = document.getElementById("infoRespuesta");
 
 generarPreguntas();
 async function generarPreguntas() {
@@ -50,4 +51,14 @@ generarPregunta = function () {
   }
 
   numPregunta++;
+}
+
+comprobarRespuesta = function(id){
+
+  if(id == respuesta_rellena){
+    infoRespuesta.innerHTML = '<b class="text-success">¡Respuesta correcta!</b>';
+  } else {
+    infoRespuesta.innerHTML = '<b class="text-danger">¡Respuesta incorrecta!</b>';
+  }
+
 }
