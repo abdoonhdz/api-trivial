@@ -28,7 +28,7 @@ async function generarPreguntas() {
 
 siguientePregunta = function () {
   alert("test");
-}
+ }
 
 generarPregunta = function () {
   respuesta_rellena = 0;
