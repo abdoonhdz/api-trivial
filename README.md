@@ -6,7 +6,7 @@ Juego del Trivial con las preguntas y las respuestas recogidas de una API
 RAMAS:
 
 1. Prohibido tocar la rama MAIN
-2. No hacemos PULL desde el MAIN
+2. Nos hacemos PULL desde el MAIN
 3. Creamos una BRANCH a partir del MAIN
 4. Antes de subir cambios: Fetch
   4.1. Pull
